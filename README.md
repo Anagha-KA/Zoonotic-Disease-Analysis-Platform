@@ -68,11 +68,10 @@ npm start
 ```
 ### 📸 Visuals
 
-*(Insert your best screenshots here, replacing the placeholders with image URLs or local links)*
 
 | Fig 1: Report Analysis Dashboard | Fig 2: Symptom Prediction & Tag Input |
 | :---: | :---: |
-| [Image URL of Report Result] | [Image URL of Symptom Tag Input & Prediction] |
+| **<img width="887" height="912" alt="Screenshot 2025-11-29 211931" src="https://github.com/user-attachments/assets/1058bd5f-0f65-4c52-96f4-c8ffd60bfd30" />** | **<img width="1191" height="912" alt="image" src="https://github.com/user-attachments/assets/b77d8216-3fd3-435c-a570-2a87d80aeb5c" />** |
 
 ---
 
