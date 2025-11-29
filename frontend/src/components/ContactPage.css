@@ -1,0 +1,125 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.contact-form-section {
+  flex: 1;
+  min-width: 400px;
+  padding: 20px 40px;
+}
+
+.contact-subtitle {
+  color: #76a9c5;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-title {
+  font-size: 28px;
+  color: #004c66;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-text {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e9f4fb;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 14px;
+  background-color: #e9f4fb;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Button */
+.send-btn {
+  background-color: #4bb5e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #3b9fcc;
+}
+
+/* Right Section */
+.contact-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  position: relative;
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 0 80px 0 0; /* curved top-right */
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* Decorative dots */
+.image-decor {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  width: 80px;
+  height: 80px;
+  background-image: radial-gradient(#89c4e1 2px, transparent 2px);
+  background-size: 12px 12px;
+  z-index: 1;
+  opacity: 0.5;
+}

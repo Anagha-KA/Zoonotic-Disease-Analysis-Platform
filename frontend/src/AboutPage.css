@@ -1,0 +1,220 @@
+/* --- 1. General & Theming --- */
+:root {
+  --accent-color: #0ea5e9; /* A modern, brighter blue */
+  --accent-dark: #0284c7;
+  --bg-light: #f8fafc;
+  --bg-dark: #0f172a;
+  --card-light: #ffffff;
+  --card-dark: #1e293b;
+  --text-light: #1e293b;
+  --text-dark: #e2e8f0;
+  --border-light: #e2e8f0;
+  --border-dark: #334155;
+  --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.2);
+  --danger-color: #ef4444;
+
+  /* For Glassmorphism Effect */
+  --card-bg-light: rgba(255, 255, 255, 0.7);
+  --card-bg-dark: rgba(30, 41, 59, 0.7);
+}
+
+.upload-page {
+  padding: 40px 20px;
+  background: var(--bg-light);
+  color: var(--text-light);
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Inter', sans-serif;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+.upload-page.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.page-header h2 {
+  color: var(--accent-color);
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.page-header .subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+.upload-page.dark .page-header .subtitle {
+  color: #94a3b8;
+}
+
+/* --- 2. Upload Area --- */
+.upload-box {
+  border: 2px dashed var(--border-light);
+  border-radius: 16px;
+  padding: 40px 20px;
+  margin: 40px 0;
+  background: var(--card-light);
+  box-shadow: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.upload-page.dark .upload-box {
+  background: var(--card-dark);
+  border-color: var(--border-dark);
+}
+.upload-box:hover, .upload-box.drag-over {
+  border-color: var(--accent-color);
+  border-style: solid;
+  transform: scale(1.02);
+  box-shadow: var(--shadow-light);
+}
+.upload-page.dark .upload-box:hover,
+.upload-page.dark .upload-box.drag-over {
+  box-shadow: var(--shadow-dark);
+}
+
+.upload-icon { color: var(--accent-color); margin-bottom: 16px; }
+.separator-text { display: block; margin: 12px 0; color: #94a3b8; }
+
+.file-label { /* ... unchanged ... */ }
+.file-name { /* ... unchanged ... */ }
+.upload-page.dark .file-name { color: var(--text-dark); }
+
+.image-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 2px solid var(--border-light);
+}
+.upload-page.dark .image-preview { border-color: var(--border-dark); }
+
+/* --- 3. Buttons & Errors --- */
+.upload-btn {
+  background: linear-gradient(45deg, var(--accent-color), var(--accent-dark));
+  border: none; color: white; padding: 14px 32px;
+  font-size: 1rem; border-radius: 50px;
+  cursor: pointer; font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex; align-items: center; gap: 8px;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+.upload-btn:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+}
+.upload-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.error-message {
+  color: var(--danger-color);
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* --- 4. Report Card (Glassmorphism) --- */
+.report-card {
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 40px;
+  text-align: left;
+  border: 1px solid var(--border-light);
+  
+  /* Glass Effect */
+  background: var(--card-bg-light);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-light);
+}
+.upload-page.dark .report-card {
+  background: var(--card-bg-dark);
+  border-color: var(--border-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.report-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 15px;
+  margin: -5px 0 20px 0;
+}
+.upload-page.dark .report-card h3 { border-color: var(--border-dark); }
+
+.report-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.report-icon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.report-section strong {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+.upload-page.dark .report-section strong { color: var(--text-dark); }
+.report-section p, .report-section ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  color: #475569;
+}
+.upload-page.dark .report-section p,
+.upload-page.dark .report-section ul {
+  color: #94a3b8;
+}
+
+.risk-level {
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+/* ... .risk-level.{low, moderate, high} styles are unchanged ... */
+
+/* --- 5. Animations --- */
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.fade-in { animation: fadeIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+fade-in-item {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

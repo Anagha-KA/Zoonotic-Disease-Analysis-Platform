@@ -1,0 +1,12 @@
+Flask
+Flask-Cors
+werkzeug
+pymongo
+Pillow
+pytesseract
+PyMuPDF
+joblib
+pandas
+numpy
+scikit-learn
+xgboost
